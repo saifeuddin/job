@@ -1,0 +1,502 @@
+@import url('https://fonts.googleapis.com/css2?family=Song+Myung&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@200&display=swap');
+
+
+
+
+
+// ---------------------------------
+.nocontent {
+    padding-block: 50px;
+    text-align: center;
+    background-color: white;
+    font-size: 20px;
+    border-radius: 5px 5px 0px 0px;
+    font-family: 'Song Myung', serif;
+
+
+    img {
+        user-select: none;
+        cursor: text;
+        width: 100px;
+        height: auto;
+    }
+}
+
+
+
+
+
+// ---------------------------------
+.main {
+    padding: 25px;
+    background-color: white;
+    border-radius: 7px 7px 0px 0px;
+
+
+    //
+    .results {
+        i {
+            cursor: pointer;
+            color: #5f56e4;
+            font-size: 20px;
+            margin-right: 10px;
+            position: relative;
+            top: 3px;
+        }
+
+        a {
+            text-transform: capitalize;
+            font-family: 'Song Myung', serif;
+
+            &:hover:not(:first-of-type) {
+                border-bottom: 3px double #000000;
+            }
+        }
+
+        padding: 6px 10px 8px 10px;
+        border-radius: 3px;
+        box-shadow: 3px 1px 1px #939b27, -1px -1px 1px 1px rgb(184, 184, 184);
+
+        font-family: 'Song Myung', serif;
+        opacity: 0;
+        animation: view 2s linear forwards;
+
+        @keyframes view {
+            100% {
+                opacity: 1;
+            }
+
+        }
+    }
+
+
+
+    //
+    .submain {
+        width: 74%;
+        margin: 0 auto;
+        margin-top: 25px;
+        padding: 0px 15px;
+        border-radius: 7px 0px 0px 08px;
+        border: 2px solid rgb(255, 255, 255);
+        border-bottom: 5px solid rgb(135, 155, 64);
+        box-shadow: 
+        // 5px 5px 0px #2c469c, 
+        -5px -5px 0px #a2a2f5;
+
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-areas: 'details details details summary summary';
+
+
+
+        //
+        .details {
+            padding-right: 10px;
+            grid-area: details;
+            border-right: 4px groove rgb(245, 245, 245);
+
+            h1, h5 {
+                font-family: 'Song Myung', serif;
+            }
+
+            h1 {
+
+                img {
+                    width: 35px;
+                    height: 35px;
+                    margin-left: 10px;
+                    position: relative;
+                    top: 5px;
+                    mix-blend-mode: multiply;
+                }
+
+        
+                line-height: 2;
+                font-size: 23px;
+                text-align: center;
+                color: rgb(90, 72, 209);
+            }
+
+            h5 {
+                line-height: 2.5;
+                font-size: 20px;
+                color: rgb(99, 53, 85);
+            }
+
+
+            //
+            .desc {
+                margin-top: 10px;
+                color: rgb(99, 53, 85);
+
+                div {
+                    margin-bottom: 20px;
+                }
+
+                .vacancy {
+                    font-family: 'Song Myung', serif;
+                    font-size: 17px;
+                    font-weight: 600;
+
+                    p {
+                        i {
+                            margin-right: 10px;
+                        }
+
+                        margin-left: 20px;
+                        font-size: 16px;
+                        line-height: 2;
+                        font-weight: normal;
+                        font-family: 'Alice', serif;
+                    }
+                }
+
+                .resp {
+                    font-size: 17px;
+                    font-weight: 600;
+                    font-family: 'Song Myung', serif;
+
+                    ul {
+                        margin-top: 5px;
+                    }
+
+                    li{
+                        list-style: disc;
+                        text-align: justify;
+                        margin: 0px 0px 10px 20px;
+                        font-size: 16px;
+                        line-height: 1.6;
+                        font-weight: normal;
+                        font-family: 'Alice', serif;
+                    }
+                }
+
+
+                .educa {
+                    font-family: 'Song Myung', serif;
+                    font-size: 17px;
+                    font-weight: 600;
+
+                    p {
+                        i {
+                            margin-right: 10px;
+                        }
+
+                        margin-left: 20px;
+                        font-size: 16px;
+                        line-height: 2;
+                        font-weight: normal;
+                        font-family: 'Alice', serif;
+                    }
+                }
+
+
+                .expri {
+                    font-family: 'Song Myung', serif;
+                    font-size: 17px;
+                    font-weight: 600;
+
+                    p {
+                        i {
+                            margin-right: 10px;
+                        }
+
+                        margin-left: 20px;
+                        font-size: 16px;
+                        line-height: 2;
+                        font-weight: normal;
+                        font-family: 'Alice', serif;
+                    }
+                }
+
+
+                .additional {
+                    font-size: 17px;
+                    font-weight: 600;
+                    font-family: 'Song Myung', serif;
+
+                    p {
+                        i {
+                            margin-right: 10px;
+                        }
+
+                        margin-left: 20px;
+                        font-size: 16px;
+                        line-height: 2;
+                        font-weight: normal;
+                        font-family: 'Alice', serif;
+                        
+                        span {
+                            font-family: inherit;
+                            display: inline-block;
+                            text-indent: 25px;
+                            color: #6e67c8;
+                            span {
+                                text-indent: 25px;
+                                display: inline-block;
+                            }
+                        }
+                    }
+                }
+
+
+                .source {
+                    font-family: 'Song Myung', serif;
+                    font-size: 17px;
+                    font-weight: 600;
+
+                    p {
+                        margin-left: 20px;
+
+                        i {
+                            margin-right: 10px;
+                        }
+
+                        a {
+                            font-size: 16px;
+                            line-height: 2;
+                            font-weight: normal;
+                            font-family: 'Alice', serif;
+                                color: rgb(83, 83, 200);
+                                text-decoration: underline blue;
+                        }
+                    }
+                }
+
+            }
+        }
+
+
+
+        //
+        .summary {
+            grid-area: summary;
+            margin: 10px 0px 0px 10px;
+            h5 {
+                i {
+                    position: relative;
+                    left: -72px;
+                }
+
+                box-shadow: inset -2px -2px 0px #88cc50, inset 2px 3px 0px  #5862ec;
+
+                padding: 10px;
+                font-size: 20px;
+                font-weight: normal;
+                text-align: center;
+                color: #fff;
+                background-color: rgb(66, 61, 61);
+                text-transform: uppercase;
+                font-family: 'Alice', serif;
+            }
+
+
+            div {
+                margin: 10px 0 0 15px;
+
+
+                p {
+                    i {
+                        margin-right: 12px;
+                        color: rgb(17, 0, 255);
+                        font-size: 16px;
+                        padding: 6px;
+                        border-radius: 50%;
+                        background-color: #cacad8;
+                    }
+
+                    margin-bottom: 20px;
+                    color: #633555;
+                    font-size: 17px;
+                    font-weight: 600;
+                    font-family: 'Song Myung', serif;
+
+
+                    span {
+                        display: inline-block;
+                        font-size: 14px;
+                        text-indent: 9px;
+                        color: #46469e;
+                        font-family: 'Alice', serif;
+                    }
+                }
+            }
+
+        }
+    }
+
+
+    //
+    .img {
+        width: 74%;
+        margin: 0 auto;
+        
+        img {
+            box-shadow: 1px 1px rgb(63, 207, 19);
+            width: 100%;
+            object-fit: cover;
+            transform: scale(.7);
+        }
+    }
+
+
+    // 
+    .more_info {
+        width: 74%;
+        margin: 20px auto;
+        padding: 10px 0px 5px 15px;
+        text-align: center;
+        
+        box-shadow: -5px -5px 0px #a2a2f5;
+        border-bottom: 5px solid rgb(135, 155, 64);
+        border-radius: 7px 0px 0px 08px;
+        background-color: #cacad8;
+
+
+        h4, h5 {
+            color: rgb(99, 53, 85);
+            font-family: 'Song Myung', serif;
+        }
+
+        h4 {
+            font-size: 23px;
+            text-align: left;
+        }
+
+        h5 {
+            font-size: 20px;
+        }
+
+        i {
+            margin-top: 10px;
+            font-size: 30px;
+            animation: move 2s ease infinite;
+            position: relative;
+
+            @keyframes move {
+                0% {
+                    top: 2px;
+                }
+                10% {
+                    top: 4px;
+                }
+                20% {
+                    top: 6px;
+                }
+                30% {
+                    top: 7px;
+                }
+
+                40% {
+                    top: 5px;
+                }
+                50% {
+                    top: 3px;
+                }
+
+                60% {
+                    top: 0px;
+                }
+                70% {
+                    top: -5px;
+                }
+                80% {
+                    top: -2px;
+                }
+                90% {
+                    top: 0px;
+                }
+                100% {
+                    top: 1px;
+                }
+            }
+        }
+
+        button {
+            padding: 10px 13px;
+            margin: 20px 0;
+            border: none;
+            border-radius: 3px;
+            background-color: #aaad7e;
+
+            box-shadow: inset -2px -2px 0px #000000, inset 2px 2px 0px  #ffffff;
+
+            &:hover, &:active {
+                opacity: 0.6;
+                box-shadow: -2px -2px 0px #000000, 2px 2px 0px  #ffffff;
+            }
+
+
+            a {
+                font-size: 15px;
+                font-family: 'Song Myung', serif;
+            }
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: rgb(218, 53, 53);
+            font-size: 18px;
+            font-weight: 600;
+            font-family: 'Alice', serif;
+        }
+    }
+
+
+
+    // 
+    .company_info {
+        width: 74%;
+        margin: 25px auto;
+        padding: 10px 0px 25px 15px;
+        
+        box-shadow: -5px -5px 0px #a2a2f5;
+        border-bottom: 5px solid rgb(135, 155, 64);
+        border-radius: 7px 0px 0px 08px;
+
+
+        h4{
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            color: rgb(99, 53, 85);
+            font-size: 23px;
+            font-family: 'Song Myung', serif;
+            text-decoration: dashed red;
+            border-bottom: 2px solid rgb(138, 130, 130);
+        }
+
+        p {
+            font-family: 'Arya', sans-serif;
+
+            &:first-of-type {
+                font-size: 17px;
+                font-weight: bold;
+            }
+
+        }
+    }
+}
+
+
+
+
+
+
+
+// Mobile Responsive
+// @media screen and (max-width: 600px) {
+
+//     .main {
+
+//         .submain {
+//             width: 70%;
+
+//             .details1 {
+//                 grid-template-columns: repeat(2, 1fr);
+//             }
+//         }
+//     }
+// }

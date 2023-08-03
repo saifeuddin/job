@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Sirin+Stencil&display=swap');
+
+
+.head {
+    padding: 10px;
+    text-align: center;
+    background-color: #6d4964;
+    border-radius: 5px 5px 0 0px;
+    border-bottom: 4px solid rgb(109, 177, 21);
+    
+    h1 {
+        font-size: 35px;
+        color: white;
+        text-transform: uppercase;
+        font-family: 'Sirin Stencil', cursive;
+    }
+
+}
+
+
+.category {
+    border-radius: 3px 3px 0 0px;
+    padding: 35px 0;
+    width: 100%;
+    min-height: 76vh;
+    background: rgb(240, 236, 236);
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+
+    .circle{
+        width: 95%;
+        min-height: 100%;
+        margin: 0px auto;
+        padding: 30px 60px;
+        border-radius: 10px;
+        border: 5px ridge rgb(199, 189, 189);
+        background: linear-gradient(to bottom, rgb(138, 126, 126), rgb(221, 221, 175));
+
+
+        perspective: 500px;
+        transform-style: preserve-3d;
+
+
+        display: grid;
+        grid-gap: 60px;
+        grid-template-columns: repeat(4, 1fr);
+        
+        
+        
+        div {
+            background: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+
+            a {
+                padding: 30px 10px;
+                color: #0c1335;
+                font-weight: bold;
+                font-size: 22px;
+                font-family: 'Sirin Stencil', cursive;
+            }
+
+            border-radius: 5px;
+
+
+            box-shadow: 5px 3px 0px 0px #6b4f64, -5px -4px 2px #285283;
+            animation: shadow 5s linear infinite alternate;
+
+
+
+            @keyframes shadow {
+                0% {
+                    transform: translateX(7px);
+                }
+                50% {
+                    transform: translateX(0px);
+                }
+                100% {
+                    transform: translateX(4px);
+                }
+            }
+
+
+            &:hover {
+                cursor: pointer;
+                box-shadow: none;
+                animation: none;
+                outline: 4px ridge rgb(79, 87, 95);
+            }
+        }
+    }
+
+
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}

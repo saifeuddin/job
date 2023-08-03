@@ -1,0 +1,148 @@
+
+.sidebar.active {
+    width: 260px;
+}
+
+
+.sidebar.active #plane {
+    visibility: visible;
+    animation: op 2s ease alternate;
+}
+
+.sidebar.active #plane:hover{
+    color: rgb(118, 195, 131);
+}
+
+
+.sidebar.active #logoname {
+    visibility: visible;
+    animation: op 2s ease alternate;
+}
+
+.sidebar.active #logoname:hover {
+    color: rgb(226, 230, 26);
+}
+
+
+@keyframes op {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.sidebar.active #btn {
+    box-shadow: 2px 2px 2px rgba(95, 88, 88, 0.5),
+                -2px -2px 2px rgba(85, 76, 76, 0.5);
+    box-shadow: 5px 5px 5px inset rgba(34, 32, 32, 0.5),
+                -5px -5px 5px inset rgba(78, 65, 65, 0.5) ;
+    border-radius: 20%;
+    font-size: 40px;
+    left: 89%;
+}
+.sidebar.active #btn:hover {
+    box-shadow: 2px 2px 2px rgb(25, 187, 47),
+                -2px -2px 2px rgba(43, 206, 184, 0.5);
+}
+
+
+.sidebar.active input[type='text'] {
+    visibility: visible;
+}
+.sidebar.active input[type='text'] + span{
+    display: none;
+}
+
+
+.sidebar.active .navList li{
+    margin-top: 0px;
+}
+.sidebar.active .navList li a{
+    border-radius: 8px;
+}
+
+.sidebar.active .navList li i{
+    top: 12px;
+    left: 10px;
+}
+
+
+.sidebar.active .navList li:hover .Sidenav_tooltip__t4qMq {
+    visibility: hidden;
+}
+
+
+.sidebar.active .navList li a:hover{
+    transform: translateZ(10px);
+}
+
+.sidebar.active .navList li a:hover i{
+    font-size: 20px;
+    animation: rotate .3s ease alternate;
+}
+
+
+.sidebar.active .navList li a i{
+    font-size: 15px;
+    transition: all .5s ease;
+    animation: font 1s ease alternate;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(90deg);
+    }
+    30% {
+        transform: rotate(180deg);
+    }
+
+    60% {
+        transform: rotate(260deg);
+    }
+
+    90% {
+        transform: rotate(340deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.sidebar.active .navList li a span{
+    display: block;
+    animation: op 1s ease alternate;
+}
+.sidebar.active .navList li a + span{
+    display: none;
+}
+
+
+.sidebar.active  #profile {
+    height: 60px;
+}
+
+
+.sidebar.active  #details {
+    display: flex;
+    align-items: center;
+    top: 10px;
+}
+
+
+.sidebar.active  #name_job {
+    visibility: visible;
+    animation: op 3s ease alternate;
+}
+
+
+.sidebar.active  #details + i {
+    visibility: visible;
+    animation: op 3s ease alternate;
+}

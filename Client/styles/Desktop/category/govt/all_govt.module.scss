@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Song+Myung&display=swap');
+
+
+
+
+
+// ---------------------------------
+.nocontent {
+    padding-block: 50px;
+    text-align: center;
+    background-color: white;
+    font-size: 20px;
+    border-radius: 5px 5px 0px 0px;
+    font-family: 'Song Myung', serif;
+
+
+    img{
+        user-select: none;
+        cursor: text;
+        width: 100px;
+        height: auto;
+    }
+}
+
+
+
+
+
+// ---------------------------------
+.main {
+    padding: 30px;
+    background-color: white;
+    border-radius: 7px 7px 0px 0px;
+
+
+    //
+    .results {
+        font-family: 'Song Myung', serif;
+
+        i {
+            color: #5f56e4;
+            font-size: 20px;
+
+            &:not(a i) {
+                margin: 0px 10px;
+                position: relative;
+                top: 2px;
+            }
+        }
+
+        a {
+            i {
+                margin-right: 10px;
+                position: relative;
+                top: 3px;
+            }
+        }
+
+        a, span {
+            font-family: 'Song Myung', serif;
+        }
+
+        a:last-of-type:hover {
+            border-bottom: 3px double #000000;
+        }
+
+        span {
+            &:last-of-type {
+                margin-left: 4px;
+                border-radius: 3px;
+                padding: 12px;
+                background-color:#a0bff0;
+            }
+        }
+
+
+        overflow: hidden;
+        text-transform: capitalize;
+        padding: 7px 10px 7px 10px;
+        border-radius: 3px;
+        box-shadow: 3px 1px 1px #939b27, -1px -1px 1px 1px rgb(184, 184, 184);
+
+        opacity: 0;
+        animation: view 2s linear forwards;
+
+        @keyframes view {
+            100% {
+                opacity: 1;
+            }
+
+        }
+    }
+
+
+
+    //
+    .submain {
+        border-radius: 5px 0px 7px 0px;
+        border: 1px solid rgb(255, 255, 255);
+        border-bottom: 5px solid rgb(135, 155, 64);
+
+        background: linear-gradient(90deg, rgb(82, 228, 160) 0%, rgb(196, 226, 196) 100%);
+        box-shadow: -5px -5px 0px #a2a2f5;
+        width: 65%;
+        height: auto;
+        margin: 40px auto;
+        padding: 5px 0px 0px 20px;
+        transition: all 1s ease;
+
+
+        &:hover {
+            background: #b89cce;
+            transform: scale(.95);
+            box-shadow: -7px -7px 0px 0px #af1c65;
+
+
+            h1 {
+                text-decoration: underline #af1c65 solid 4px;
+            }
+        }
+
+
+        h1 {
+            text-align-last: center;
+            cursor: pointer;
+
+            img {
+                position: relative;
+                top: 5px;
+                width: 35px;
+                height: 35px;
+                margin-right: 10px;
+                mix-blend-mode: multiply;
+            }
+
+            font-size: 25px;
+            font-family: 'Song Myung', serif;
+            line-height: 2;
+            color: rgb(99, 53, 85);
+        }
+
+
+        //
+        .desc {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas: 'details details img img';
+
+
+            //
+            .details {
+                grid-area: details;
+
+                //
+                .dep {
+
+                    p:first-of-type {
+                        color: rgb(65, 53, 138);
+                        font-size: 20px;
+                        line-height: 2.5;
+                        font-weight: 600;
+                        font-family: 'Song Myung', serif;
+                    }
+
+                    p:not(:first-of-type) {
+                        margin-top: 10px;
+                        font-size: 15px;
+                        line-height: 1.8;
+                        text-align: justify;
+                        word-spacing: 3px;
+                    }
+                }
+
+
+                .seemore {
+                    margin-block: 13px;
+                    background-color: rgb(42, 77, 110);
+                    width: 120px;
+                    border-radius: 2px;
+                    display: inline-block;
+
+
+                    a {
+                        position: relative;
+                        text-align: center;
+                        line-height: 2.2;
+                        display: block;
+                        height: 35px;
+                        width: 100%;
+                        overflow: hidden;
+                        color: whitesmoke;
+                        font-family: 'Song Myung', serif;
+
+                        transition: background-color .7s ease;
+
+                        &:hover {
+                            color: #802be2;
+                            border-radius: 3px;
+                            background-color: #03e9f4;
+                            outline: 2px solid rgb(170, 129, 129);
+                        }
+
+
+                        span {
+                            position: absolute;
+                            display: block;
+                        }
+
+
+                        span:nth-child(1) {
+                            top: 0;
+                            left: -100%;
+
+                            width: 100%;
+                            height: 3px;
+
+                            background: linear-gradient(90deg, transparent, #03e9f4);
+                            animation: btn1 1s linear infinite;
+                            -webkit-animation: btn1 1s linear infinite;
+                        }
+
+                        @keyframes btn1 {
+                            0% {
+                                left: -100%;
+                            }
+
+                            50%,
+                            100% {
+                                left: 100%;
+                            }
+                        }
+
+
+
+                        span:nth-child(2) {
+                            background-color: rgb(226, 218, 218);
+                            top: -100%;
+                            right: 0;
+                            height: 100%;
+                            width: 3px;
+
+                            background: linear-gradient(180deg, transparent, #03e9f4);
+                            animation: btn2 1s linear infinite;
+                            -webkit-animation: btn2 1s linear infinite;
+                            animation-delay: .25s;
+                        }
+
+                        @keyframes btn2 {
+                            0% {
+                                top: -100%;
+                            }
+
+                            50%,
+                            100% {
+                                top: 100%;
+                            }
+                        }
+
+
+
+
+
+
+                        span:nth-child(3) {
+                            bottom: 0;
+                            right: -100%;
+
+                            height: 3px;
+                            width: 100%;
+                            background: linear-gradient(270deg, transparent, #00f2ff);
+                            animation: btn3 1s linear infinite;
+                            -webkit-animation: btn3 1s linear infinite;
+                            animation-delay: .50s;
+                        }
+
+                        @keyframes btn3 {
+                            0% {
+                                right: -100%;
+                            }
+
+                            50%,
+                            100% {
+                                right: 100%;
+                            }
+                        }
+
+
+
+
+                        span:nth-child(4) {
+                            bottom: -100%;
+                            left: 0;
+                            width: 3px;
+                            height: 100%;
+
+                            background: linear-gradient(360deg, transparent, #00f2ff);
+                            animation: btn4 1s linear infinite;
+                            animation-delay: .75s;
+                        }
+
+                        @keyframes btn4 {
+                            0% {
+                                bottom: -100%;
+                            }
+
+                            50%,
+                            100% {
+                                bottom: 100%;
+                            }
+                        }
+                    }    
+                }
+
+
+                //
+                .save {
+                    cursor: pointer;
+                    background-color: rgb(42, 77, 110);
+                    outline: none;
+                    border: none;
+                    padding: 7px 10px;
+                    border-radius: 2px;
+
+                    position: relative;
+                    left: 10px;
+                    top: -12px;
+
+                    transition: background-color 1s ease;
+
+                    &:hover {
+                        border-radius: 3px;
+                        background-color: #03e9f4;
+                        outline: 2px solid rgb(170, 129, 129);
+
+                        i {
+                            color: #421c6d;
+                        }
+                        a {
+                            color: #802be2;
+                        }
+                    }
+
+
+                    i {
+                        color: #ffffff;
+                        margin-right: 10px;
+                    }
+
+
+                    a{
+                        font-size: 16px;
+                        color: whitesmoke;
+                        font-family: 'Song Myung', serif;
+    
+                    }
+                }
+
+                //
+                .dates {
+                    p {
+                        font-size: 14px;
+                        font-family: 'Song Myung', serif;
+
+
+                        i {
+                            padding: 4px;
+                            margin: 0 12px 10px 0;
+                            border-radius: 50%;
+                            color: rgb(132, 74, 226);
+                            background-color: rgb(233, 224, 224);
+                        }
+
+
+                        span {
+                            color: #46469e;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+
+
+            //
+            .img {
+                grid-area: img;
+                cursor: pointer;
+
+                img{    
+                    margin-top: 50px;
+                    width: 100%;
+                    border-radius: 7px;
+                    object-fit: cover;
+                    border: 2px groove rgb(168, 163, 163);
+                    transform: scale(.9);
+                }          
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+// Mobile Responsive
+@media screen and (max-width: 600px) {
+
+    .main {
+
+        .submain {
+            width: 70%;
+
+            .details1 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}

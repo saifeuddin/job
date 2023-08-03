@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Sirin+Stencil&display=swap');
+
+
+.header {
+    cursor: pointer;
+    background: rgb(39, 25, 25);
+    background: linear-gradient(97deg, rgba(39, 25, 25, 1) 0%, rgb(92, 8, 8) 40%, rgb(98, 14, 14) 64%, rgba(27, 18, 18, 1) 100%);
+
+
+
+    width: 100%;
+    padding: 50px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+
+
+
+
+
+
+
+.section {
+    border-radius: 5px;
+    background: white;
+}
+
+
+
+
+
+
+.firstdiv h1 {
+    color: rgb(45, 41, 47);
+    text-indent: 1.9rem;
+    padding-bottom: .7rem;
+    font-size: 2.5rem;
+    font-family: 'Sirin Stencil', cursive;
+
+
+    height: 100%;
+    width: 240px;
+    position: relative;
+    border-radius: 5px;
+
+    box-shadow: inset -02px -2px 11px rgb(125, 118, 138);
+    animation: move 11s ease infinite alternate;
+}
+
+
+
+@keyframes move {
+    0% {
+        left: 0%;
+        background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255));
+    }
+    10% {
+        left: 20%;
+        background: linear-gradient(to right, rgb(167, 167, 167), rgb(144, 123, 95));
+    }
+    30% {
+        left: 30%;
+        background: linear-gradient(to right, rgb(243, 175, 175), rgb(173, 178, 207));
+    }
+    50% {
+        left: 50%;
+        background: linear-gradient(to right, rgb(241, 162, 162), rgb(151, 162, 224));
+    }
+
+    100% {
+        left: 78%;
+        background: linear-gradient(to right, rgb(139, 204, 139), rgb(221, 129, 172));
+    }
+}
+
+
+
+
+
+
+.newjobs {
+    position: relative;
+    background: rgb(207, 197, 197);
+
+    transform-style: preserve-3d;
+    perspective: 200px;
+
+
+    padding: 1.5rem 1.5rem;
+    display: grid;
+    grid-gap: 1.7rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+
+
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+
+.job {
+    overflow: hidden;
+    text-align: center;
+
+    position: relative;
+    border-radius: 5px;
+
+    background: linear-gradient(to right, rgb(16, 54, 15), #4a1657, rgb(255, 255, 86));
+    box-shadow: 2px 2px 18px #ffffff, -2px -2px 8px #7c8395;
+
+    animation: jobmove 3s ease infinite alternate;
+}
+
+.job:hover {
+    cursor: pointer;
+    box-shadow: none;
+    background: #fff;
+    animation: none;
+    outline: 4px groove rgb(192, 187, 183);
+}
+
+@keyframes jobmove {
+    0% {
+        transform: translateX(1px);
+        transform: translateY(3px);
+        box-shadow: 2px 2px 15px #060318, -2px -2px 5px #5d87e0;
+    }
+    100% {
+        transform: translateX(0px);
+        transform: translateY(0px);
+    }
+}
+
+
+
+.img img {
+    max-width: 100%;
+    object-fit: cover;
+}
+.job:hover .img{
+    visibility: hidden;
+}
+
+
+
+.title_date {
+    position: absolute;
+    top: -510px;
+    opacity: 0;
+    transition: all .5s ease;
+}
+.job:hover .title_date {
+    opacity: 1;
+    top: 20px;
+    bottom: 0px;
+}
+.title {
+    padding-bottom: .9rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.date {
+    font-size: .9rem;
+    padding: .5rem;
+}

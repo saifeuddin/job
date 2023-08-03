@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Song+Myung&display=swap');
+
+
+.section {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 50px;
+
+    display: flex;
+    gap: 110px;
+
+    .content {
+        padding: 20px;
+        text-align: center;
+
+        img {
+            width: 100px;
+            position: relative;
+            mix-blend-mode: multiply;
+            animation: move 5s linear infinite alternate-reverse;
+
+
+            @keyframes move {
+                0% {
+                    top: 0px;
+                }
+                10% {
+                    top: -10px;
+                }
+                20% {
+                    top: -20px;
+                }
+                30% {
+                    top: -30px;
+                }
+                40% {
+                    top: -40px;
+                }
+                50% {
+                    top: -30px;
+                }
+                60% {
+                    top: -20px;
+                }
+                70% {
+                    top: -10px;
+                }
+                80% {
+                    top: 0px;
+                }
+                90% {
+                    top: 20px;
+                }
+                100%{ 
+                    top: 40px;
+                }
+            }
+
+        }
+
+        h1, h2 {
+            color: #21255a;
+            margin-top: 20px;
+            font-size: 25px;
+            font-family: 'Song Myung', serif;
+        }
+
+    }
+
+
+    .form {
+        background-color : rgb(202, 217, 230);
+        width: 450px;
+        height: 250px;
+        border-radius: 5px;
+        position: relative;
+
+        .fcontent {
+            margin: 30px;
+
+            div {
+                padding: 12px;
+
+                label{
+                    font-size: 18px;
+                    color: #633555;
+                    font-family: 'Song Myung', serif;
+                }
+                
+                input {
+                    position: absolute;
+                    left: 200px;
+                    outline: none;
+                    height: 30px;
+                    text-indent: 5px;
+                    font-size: 17px;
+                    font-family: 'Song Myung', serif;
+                }
+                
+                ::-webkit-file-upload-button {
+                    font-family: 'Song Myung', serif;
+                    background: #1b8d33;
+                    color: white;
+                    padding: 5px 20px;
+                    font-size: 10px;
+                    border-radius: 50px;
+                    box-shadow: 0 2px 0px rgb(41, 65, 22), 0 3px 01px rgb(63, 75, 184);
+                    transition: all 0.15s ease;
+                    letter-spacing: 1px;
+                    cursor: pointer;
+                    font-weight: bold;
+                    user-select: none;
+                    border: 1px solid transparent;
+                }
+
+            }
+
+            button {
+                text-transform: uppercase;
+                background-color: rgb(142, 187, 97);
+                margin-top: 15px;
+                padding: 10px 25px;
+                font-size: 14px;
+                font-weight: bold;
+                font-family: 'Song Myung', serif;
+
+                border: none;
+                border-radius: 5px;
+
+                box-shadow: inset -2px -2px 0px #000000, inset 2px 2px 0px #ffffff;
+
+                &:hover,
+                &:active {
+                    opacity: 0.6;
+                    box-shadow: -2px -2px 0px #000000, 2px 2px 0px #ffffff;
+                }
+            }
+        }
+    }
+}
+
+
+.signup {
+    padding: 20px;
+
+    p {
+        font-family: 'Song Myung', serif;
+        font-size: 23px;
+        
+        
+        span{
+            color: #3551cf;
+            cursor: pointer;
+            font-size: 18px;
+            font-family: inherit;
+            padding-bottom: 3px;
+
+            &:hover {
+                border-bottom: 2px double #000;
+            }
+        }
+    }
+}

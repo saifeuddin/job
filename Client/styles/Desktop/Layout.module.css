@@ -1,0 +1,9 @@
+
+.container {
+    width: 93%;
+    position: absolute;
+    left: 66px;
+    border-radius: 5px;
+    background-color: rgb(43,43, 53);
+}
+

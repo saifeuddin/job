@@ -1,0 +1,136 @@
+
+.sideNav ul {
+    margin-top: 35px;
+}
+
+
+.sideNav ul li{
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 130px;
+    transition: all 1s ease;
+}
+
+
+.sideNav ul li input{
+    background: #1d1b31;
+    padding-left: 45px;
+    font-size: 15px;
+    color: #fff;
+    position: absolute;
+    height: 90%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    visibility: hidden;
+}
+
+
+.sideNav ul li > i{
+    position: absolute;
+    left: 7px;
+    top: 8px;
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    text-align: center;
+    z-index: 1;
+
+    &:hover {
+        color: #2e31e0;
+    }
+}
+
+
+.sideNav ul li a{
+    font-family: unset;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 5px;
+    transition: all .6s ease;
+}
+
+
+.sideNav ul li a:hover{
+    cursor: pointer;
+    color: #11101d;
+    text-align: center;
+    background-color: rgb(230, 212, 212);
+    border-radius: 8px;
+    transform: translateZ(10px);
+}
+
+
+.sideNav ul li a:hover i{
+    color: #2e31e0;
+}
+
+.sideNav ul li:hover {
+    transform: translateX(-1px);
+}
+
+
+.sideNav ul li a:hover i{
+    transform: translateX(-1px) translateY(1px);
+}
+
+
+.sideNav ul li a i{
+    min-width: 40px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 20px;
+    transition: all .4s ease;
+    margin-right: 10px;
+}
+
+
+.sideNav ul li a span {
+    display: none;
+    font-size: 18px;
+}
+
+
+.tooltip{
+    height: 35px;
+    width: 122px;
+    line-height: 35px;
+    position: absolute;
+    left: 80px;
+    top: 50%;
+    border-radius: 5px;
+    text-align: center;
+    visibility: hidden;
+    transform: translateY(-50%);
+}
+
+.sideNav ul li:hover .tooltip {
+    color: rgb(255, 255, 255);
+    visibility: visible;
+    animation: op .5s ease;
+
+    /* Numorphism */
+    background: #212327;
+    border-radius: 6px;
+    box-shadow: 1px 1px 10px #b2b8c9, -1px -1px 10px #f0f8ff;
+}
+
+
+@keyframes op {
+
+    0% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
+    }
+}
